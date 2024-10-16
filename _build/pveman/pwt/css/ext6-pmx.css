@@ -1,0 +1,350 @@
+.pmx-clear-trigger {
+    background-image: url(../images/pmx-clear-trigger.png);
+}
+
+.pmx-hint {
+    background-color: LightYellow;
+}
+
+.proxmox-tags-full .proxmox-tag-light,
+.proxmox-tags-full .proxmox-tag-dark {
+    border-radius: 3px;
+    padding: 1px 6px;
+    margin: 0px 1px;
+    display: inline-block;
+}
+
+.proxmox-tags-full .x-grid-cell-inner-treecolumn .proxmox-tag-light,
+.proxmox-tags-full .x-grid-cell-inner-treecolumn .proxmox-tag-dark {
+    display: inherit;
+}
+
+.x-boundlist-item > .proxmox-tag-light,
+.x-boundlist-item > .proxmox-tag-dark {
+    line-height: 15px;
+}
+
+
+.proxmox-tags-circle .proxmox-tag-light,
+.proxmox-tags-circle .proxmox-tag-dark {
+    margin: 0px 1px;
+    position: relative;
+    top: 2px;
+    border-radius: 6px;
+    height: 12px;
+    width: 12px;
+    display: inline-block;
+    color: transparent !important;
+    overflow: hidden;
+}
+
+.proxmox-tags-none .proxmox-tag-light,
+.proxmox-tags-none .proxmox-tag-dark {
+    display: none;
+}
+
+.proxmox-tags-dense .proxmox-tag-light,
+.proxmox-tags-dense .proxmox-tag-dark {
+    width: 6px;
+    margin-right: 1px;
+    display: inline-block;
+    color: transparent !important;
+    overflow: hidden;
+    vertical-align: bottom;
+}
+
+.proxmox-tags-full .proxmox-tag-light {
+    color: #fff;
+    background-color: #383838;
+}
+
+.proxmox-tags-full .proxmox-tag-dark {
+    color: #000;
+    background-color: #f0f0f0;
+}
+
+.x-mask-msg-text {
+    text-align: center;
+}
+
+.proxmox-disabled-row, .proxmox-disabled-row td {
+    /*color: #a0a0a0;*/
+    color: #666665;
+}
+
+.proxmox-invalid-row {
+    background-color: #f3d6d7;
+}
+
+.proxmox-warning-row {
+    background-color: #f5e5d8;
+}
+
+.proxmox-good-row {
+    background-color: #21BF4B;
+}
+
+/* some icons have to be color manually */
+.black {
+    color: #000;
+}
+
+.normal {
+    color: #c2ddf2;
+}
+
+.faded {
+    color: #cfcfcf;
+}
+
+.good {
+    color: #21BF4B;
+}
+
+.warning {
+    color: #fc0;
+}
+
+.critical {
+    color: #FF6C59;
+}
+
+.info-blue {
+    color: #3892d4;
+}
+
+.pwt-eol-icon {
+    position: relative;
+    float: left;
+    margin-right: 5px;
+    font-size: 1.3em;
+    color: #FF6C59;
+}
+
+/* reduce chart legend space usage to something more sane */
+.x-legend-item {
+	padding: 0.4em 0.8em 0.4em 1.8em;
+}
+
+.x-legend-item-marker {
+	left: 0.5em;
+	top: 0.6em;
+}
+
+/* for info widget */
+div.left-aligned {
+    float: left;
+}
+
+div.right-aligned {
+    float: right;
+}
+
+.x-progress.critical .x-progress-bar{
+    background-color: #FF8888;
+}
+
+.x-progress.warning .x-progress-bar{
+    background-color: #FFCC00;
+}
+
+.x-treelist-item-icon {
+    color: #000;
+    font-size: 14px;
+}
+
+.x-btn-icon-el-default-toolbar-small {
+    font-size: 14px;
+}
+.x-btn-icon-el-default-small {
+    font-size: 14px;
+}
+
+.x-tab-icon-el-default {
+    color: #000;
+    font-size: 14px;
+    margin-top: 2px;
+}
+
+.pmx-icon {
+    height: 16px;
+    background-position: bottom;
+    vertical-align: bottom;
+    padding: 0;
+}
+
+.pmx-itype-icon-memory,
+.pmx-itype-icon-processor,
+.pmx-itype-icon /* NOTE: use this one instead of adding new specific ones! */
+{
+    background-repeat: no-repeat;
+    background-position:3px center;
+    padding-left: 20px;
+    background-size: 16px 16px; /* Chrom* needs both as else it gets cut-off due do non 1:1 ratio */
+}
+
+.pmx-itype-icon-memory {
+    background-image:url(../images/icon-ram.svg);
+}
+
+.pmx-itype-icon-processor {
+    background-image:url(../images/icon-cpu.svg);
+}
+
+.pmx-itype-icon-debian-swirl {
+    padding-left: 22px;
+    background-size: 16px 16px; /* Chrom* needs both as else it gets cut-off due do non 1:1 ratio */
+    background-image:url(../images/debian-swirl-openlogo.svg);
+}
+.pmx-itype-icon-proxmox-x {
+    padding-left: 22px;
+    background-size: 16px 16px; /* Not really required here, as here WxH is 1:1 but cannot hurt */
+    background-image:url(../images/proxmox-symbol-x.svg);
+}
+
+.pmx-itype-icon-openid-logo {
+    padding-left: 22px;
+    background-size: 16px 16px;
+    background-image:url(../images/openid-icon-100x100.png);
+}
+
+/* change font for config panel back to fontawesome */
+.x-treelist-item-expanded > * > * > .x-treelist-item-expander::after,
+.x-treelist-item-expander::after {
+    font: 16px/1 FontAwesome;
+}
+
+.x-treelist-pve-nav {
+    background-color: #f5f5f5;
+}
+
+/* fix padding for legend in header */
+.x-legend-inner {
+    padding: 0;
+}
+
+.proxmox-apt-repos .x-grid-group-hd {
+    color: #000000;
+    background-color: #f5f5f5;
+}
+.proxmox-apt-repos .x-grid-group-title {
+    color: #333;
+}
+
+/* some general helper classes */
+.centered-flex-column {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+/* Fix icon/text baseline */
+.x-tab-default {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.x-tab-default > span {
+    text-align: center;
+    vertical-align: middle;
+}
+.x-tab-button {
+    line-height: unset;
+}
+.x-tab-inner {
+    display: unset;
+    vertical-align: text-top;
+}
+.x-tab-wrap {
+    display: unset;
+}
+.x-tab-default-top {
+    padding: 2px 6px 2px 6px;
+}
+
+/* rules for the markdown content, prefix with the .pmx-md class */
+.pmx-md {
+    font-size: 1.0em;
+    line-height: 1.25em;
+}
+.pmx-md p {
+    margin-top: 0.75em;
+    margin-bottom: 0.75em;
+}
+.pmx-md :is(h1, h2, h3, h4, h5, h6) {
+    margin-top: 0.9em;
+    margin-bottom: 0.75em;
+}
+.pmx-md h1 { font-size: 175%; }
+.pmx-md h2 { font-size: 150%; }
+.pmx-md h3 { font-size: 125%; }
+.pmx-md h4 { font-size: 110%; }
+.pmx-md h5 { font-size: 100%; }
+.pmx-md h6 { font-size: 100%; }
+
+.pmx-md code {
+    white-space: pre;
+    background-color: #f5f5f5;
+    padding: 1px;
+}
+.pmx-md pre code {
+    display: inline-block;
+    padding: 5px;
+    border-left: 3px solid #e0e0e0;
+}
+.pmx-md strong {
+    font-weight: bold;
+}
+.pmx-md blockquote {
+    border-left: 1px solid #666666;
+    padding-left: 4px;
+    margin: 10px 2ch;
+}
+/* markdown tables */
+.pmx-md table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+.pmx-md td, .pmx-md th {
+    padding: 5px;
+}
+.pmx-md td[align="center"] {
+    text-align: center;
+}
+.pmx-md td[align="right"] {
+    text-align: right;
+}
+.pmx-md tbody td {
+    border-bottom: 1px solid #e0e0e0;
+}
+.pmx-md tbody tr:nth-of-type(even) {
+    background-color: #f5f5f5;
+}
+.pmx-md tbody tr:last-of-type td {
+    border-bottom: 1px solid #666666;
+}
+.pmx-md tbody tr:hover td {
+    background-color: #e0e0e0;
+}
+/* markdown tables end */
+
+/* markdown content end */
+
+/* action column fix start */
+.x-action-col-icon {
+    margin: 0 1px;
+    font-size: 14px;
+}
+.x-action-col-icon:before, .x-action-col-icon:after {
+    font-size: 14px;
+}
+.x-action-col-icon:hover:before, .x-action-col-icon:hover:after {
+    text-shadow: 1px 1px 1px #AAA;
+    font-weight: 800;
+}
+.x-action-col-icon:before {
+    color: #555;
+}
+/* action column fix end */

@@ -1,0 +1,274 @@
+map:de:German:de:qwertz/de-latin1-nodeadkeys.kmap.gz:de:nodeadkeys:
+map:de-ch:Swiss-German:de-ch:qwertz/sg-latin1.kmap.gz:ch:de_nodeadkeys:
+map:dk:Danish:da:qwerty/dk-latin1.kmap.gz:dk:nodeadkeys:
+map:en-gb:United Kingdom:en-gb:qwerty/uk.kmap.gz:gb::
+map:en-us:U.S. English:en-us:qwerty/us-latin1.kmap.gz:us::
+map:es:Spanish:es:qwerty/es.kmap.gz:es:nodeadkeys:
+map:fi:Finnish:fi:qwerty/fi-latin1.kmap.gz:fi:nodeadkeys:
+map:fr:French:fr:azerty/fr-latin1.kmap.gz:fr:nodeadkeys:
+map:fr-be:Belgium-French:fr-be:azerty/be2-latin1.kmap.gz:be:nodeadkeys:
+map:fr-ca:Canada-French:fr-ca:qwerty/cf.kmap.gz:ca:fr-legacy:
+map:fr-ch:Swiss-French:fr-ch:qwertz/fr_CH-latin1.kmap.gz:ch:fr_nodeadkeys:
+map:hu:Hungarian:hu:qwertz/hu.kmap.gz:hu::
+map:is:Icelandic:is:qwerty/is-latin1.kmap.gz:is:nodeadkeys:
+map:it:Italian:it:qwerty/it2.kmap.gz:it:nodeadkeys:
+map:jp:Japanese:ja:qwerty/jp106.kmap.gz:jp::
+map:lt:Lithuanian:lt:qwerty/lt.kmap.gz:lt:std:
+map:mk:Macedonian:mk:qwerty/mk.kmap.gz:mk:nodeadkeys:
+map:nl:Dutch:nl:qwerty/nl.kmap.gz:nl::
+map:no:Norwegian:no:qwerty/no-latin1.kmap.gz:no:nodeadkeys:
+map:pl:Polish:pl:qwerty/pl.kmap.gz:pl::
+map:pt:Portuguese:pt:qwerty/pt-latin1.kmap.gz:pt:nodeadkeys:
+map:pt-br:Brazil-Portuguese:pt-br:qwerty/br-latin1.kmap.gz:br:nodeadkeys:
+map:se:Swedish:sv:qwerty/se-latin1.kmap.gz:se:nodeadkeys:
+map:si:Slovenian:sl:qwertz/slovene.kmap.gz:si::
+map:tr:Turkish:tr:qwerty/trq.kmap.gz:tr::
+ad:Andorra:::
+ae:United Arab Emirates:::
+af:Afghanistan:::
+ag:Antigua & Barbuda:::
+ai:Anguilla:::
+al:Albania:::
+am:Armenia:::
+ao:Angola:::
+aq:Antarctica:::
+ar:Argentina:::
+as:Samoa (American):::
+at:Austria:de:ftp.at.debian.org:
+au:Australia::ftp.au.debian.org:
+aw:Aruba:::
+ax:Åland Islands:::
+az:Azerbaijan:::
+ba:Bosnia & Herzegovina:::
+bb:Barbados:::
+bd:Bangladesh:::
+be:Belgium:fr-be:ftp.be.debian.org:
+bf:Burkina Faso:::
+bg:Bulgaria::ftp.bg.debian.org:
+bh:Bahrain:::
+bi:Burundi:::
+bj:Benin:::
+bl:St Barthelemy:::
+bm:Bermuda:::
+bn:Brunei:::
+bo:Bolivia:::
+bq:Caribbean NL:::
+br:Brazil:pt-br:ftp.br.debian.org:
+bs:Bahamas:::
+bt:Bhutan:::
+bv:Bouvet Island:::
+bw:Botswana:::
+by:Belarus:::
+bz:Belize:::
+ca:Canada:en-us:ftp.ca.debian.org:
+cc:Cocos (Keeling) Islands:::
+cd:Congo (Dem. Rep.):::
+cf:Central African Rep.:::
+cg:Congo (Rep.):::
+ch:Switzerland:de-ch:ftp.ch.debian.org:
+ci:Côte d'Ivoire:::
+ck:Cook Islands:::
+cl:Chile::ftp.cl.debian.org:
+cm:Cameroon:::
+cn:China:::
+co:Colombia:::
+cr:Costa Rica:::
+cu:Cuba:::
+cv:Cape Verde:::
+cw:Curaçao:::
+cx:Christmas Island:::
+cy:Cyprus:::
+cz:Czech Republic::ftp.cz.debian.org:
+de:Germany:de:ftp.de.debian.org:
+dj:Djibouti:::
+dk:Denmark:dk:ftp.dk.debian.org:
+dm:Dominica:::
+do:Dominican Republic:::
+dz:Algeria:::
+ec:Ecuador:::
+ee:Estonia::ftp.ee.debian.org:
+eg:Egypt:::
+eh:Western Sahara:::
+er:Eritrea:::
+es:Spain:es:ftp.es.debian.org:
+et:Ethiopia:::
+fi:Finland:fi:ftp.fi.debian.org:
+fj:Fiji:::
+fk:Falkland Islands:::
+fm:Micronesia:::
+fo:Faroe Islands:::
+fr:France:fr:ftp.fr.debian.org:
+ga:Gabon:::
+gb:Britain (UK):en-gb:ftp.uk.debian.org:
+gd:Grenada:::
+ge:Georgia:::
+gf:French Guiana:::
+gg:Guernsey:::
+gh:Ghana:::
+gi:Gibraltar:es::
+gl:Greenland:::
+gm:Gambia:::
+gn:Guinea:::
+gp:Guadeloupe:::
+gq:Equatorial Guinea:::
+gr:Greece::ftp.gr.debian.org:
+gs:South Georgia & the South Sandwich Islands:::
+gt:Guatemala:::
+gu:Guam:::
+gw:Guinea-Bissau:::
+gy:Guyana:::
+hk:Hong Kong::ftp.hk.debian.org:
+hm:Heard Island & McDonald Islands:::
+hn:Honduras:::
+hr:Croatia::ftp.hr.debian.org:
+ht:Haiti:::
+hu:Hungary:hu:ftp.hu.debian.org:
+id:Indonesia:::
+ie:Ireland::ftp.ie.debian.org:
+il:Israel:::
+im:Isle of Man:::
+in:India:::
+io:British Indian Ocean Territory:::
+iq:Iraq:::
+ir:Iran:::
+is:Iceland:is:ftp.is.debian.org:
+it:Italy:it:ftp.it.debian.org:
+je:Jersey:::
+jm:Jamaica:::
+jo:Jordan:::
+jp:Japan:jp:ftp.jp.debian.org:
+ke:Kenya:::
+kg:Kyrgyzstan:::
+kh:Cambodia:::
+ki:Kiribati:::
+km:Comoros:::
+kn:St Kitts & Nevis:::
+kp:Korea (North):::
+kr:Korea (South)::ftp.kr.debian.org:
+kw:Kuwait:::
+ky:Cayman Islands:::
+kz:Kazakhstan:::
+la:Laos:::
+lb:Lebanon:::
+lc:St Lucia:::
+li:Liechtenstein:de-ch::
+lk:Sri Lanka:::
+lr:Liberia:::
+ls:Lesotho:::
+lt:Lithuania:lt::
+lu:Luxembourg:fr-ch::
+lv:Latvia:::
+ly:Libya:::
+ma:Morocco:::
+mc:Monaco:::
+md:Moldova:::
+me:Montenegro:::
+mf:St Martin (French):::
+mg:Madagascar:::
+mh:Marshall Islands:::
+mk:North Macedonia:mk::
+ml:Mali:::
+mm:Myanmar (Burma):::
+mn:Mongolia:::
+mo:Macau:::
+mp:Northern Mariana Islands:::
+mq:Martinique:::
+mr:Mauritania:::
+ms:Montserrat:::
+mt:Malta:::
+mu:Mauritius:::
+mv:Maldives:::
+mw:Malawi:::
+mx:Mexico::ftp.mx.debian.org:
+my:Malaysia:::
+mz:Mozambique:::
+na:Namibia:::
+nc:New Caledonia:::
+ne:Niger:::
+nf:Norfolk Island:::
+ng:Nigeria:::
+ni:Nicaragua:::
+nl:Netherlands:en-us:ftp.nl.debian.org:
+no:Norway:no:ftp.no.debian.org:
+np:Nepal:::
+nr:Nauru:::
+nu:Niue:::
+nz:New Zealand::ftp.nz.debian.org:
+om:Oman:::
+pa:Panama:::
+pe:Peru:::
+pf:French Polynesia:::
+pg:Papua New Guinea:::
+ph:Philippines:::
+pk:Pakistan:::
+pl:Poland:pl:ftp.pl.debian.org:
+pm:St Pierre & Miquelon:::
+pn:Pitcairn:::
+pr:Puerto Rico:::
+ps:Palestine:::
+pt:Portugal:pt:ftp.pt.debian.org:
+pw:Palau:::
+py:Paraguay:::
+qa:Qatar:::
+re:Réunion:::
+ro:Romania::ftp.ro.debian.org:
+rs:Serbia:::
+ru:Russia::ftp.ru.debian.org:
+rw:Rwanda:::
+sa:Saudi Arabia:::
+sb:Solomon Islands:::
+sc:Seychelles:::
+sd:Sudan:::
+se:Sweden::ftp.se.debian.org:
+sg:Singapore:::
+sh:St Helena:::
+si:Slovenia:si:ftp.si.debian.org:
+sj:Svalbard & Jan Mayen:::
+sk:Slovakia::ftp.sk.debian.org:
+sl:Sierra Leone:::
+sm:San Marino:::
+sn:Senegal:::
+so:Somalia:::
+sr:Suriname:::
+ss:South Sudan:::
+st:Sao Tome & Principe:::
+sv:El Salvador:::
+sx:St Maarten (Dutch):::
+sy:Syria:::
+sz:Eswatini (Swaziland):::
+tc:Turks & Caicos Is:::
+td:Chad:::
+tf:French Southern & Antarctic Lands:::
+tg:Togo:::
+th:Thailand:::
+tj:Tajikistan:::
+tk:Tokelau:::
+tl:East Timor:::
+tm:Turkmenistan:::
+tn:Tunisia:::
+to:Tonga:::
+tr:Turkey::ftp.tr.debian.org:
+tt:Trinidad & Tobago:::
+tv:Tuvalu:::
+tw:Taiwan::ftp.tw.debian.org:
+tz:Tanzania:::
+ua:Ukraine:::
+ug:Uganda:::
+um:US minor outlying islands:::
+us:United States:en-us:ftp.us.debian.org:
+uy:Uruguay:::
+uz:Uzbekistan:::
+va:Vatican City:it::
+vc:St Vincent:::
+ve:Venezuela:::
+vg:Virgin Islands (UK):::
+vi:Virgin Islands (US):::
+vn:Vietnam:::
+vu:Vanuatu:::
+wf:Wallis & Futuna:::
+ws:Samoa (western):::
+ye:Yemen:::
+yt:Mayotte:::
+za:South Africa:::
+zm:Zambia:::
+zw:Zimbabwe:::

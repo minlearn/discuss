@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>devdeskos - Proxmox Virtual Environment</title>
+    <script>
+      baseurl=`${location.origin}${location.pathname.startsWith('/discuss/_build/pveman') ? '/discuss/_build/pveman/' : location.pathname.startsWith('/pveman') ? '/pveman/' : '/'}`
+      document.write(`<base href="${baseurl}" />`);
+      console.log(`<base href="${document.baseURI}" />`)
+    </script>
+    <link rel="icon" sizes="128x128" href="./images/logo-128.png" />
+    <link rel="apple-touch-icon" sizes="128x128" href="./images/logo-128.png" />
+    <link rel="stylesheet" type="text/css" href="./ext6/theme-crisp/resources/theme-crisp-all.css?ver=7.0.0" />
+    <link rel="stylesheet" type="text/css" href="./ext6/crisp/resources/charts-all.css?ver=7.0.0" />
+    <link rel="stylesheet" type="text/css" href="./fa/css/font-awesome.css" />
+    <link rel="stylesheet" type="text/css" href="./css/ext6-pve.css?ver=7.4-3" />
+    <link rel="stylesheet" type="text/css" href="./pwt/css/ext6-pmx.css?ver=3.6.3" />
+    
+    <script type='text/javascript'>function gettext(buf) { return buf; }</script>
+    
+    <script type="text/javascript" src="./ext6/ext-all.js?ver=7.0.0"></script>
+    <script type="text/javascript" src="./ext6/charts.js?ver=7.0.0"></script>
+    
+    <script type="text/javascript" src="./js/u2f-api.js"></script>
+    <script type="text/javascript" src="/qrcode.min.js"></script>
+    <script type="text/javascript">
+    Proxmox = {
+ 	server: Ext.util.Cookies.get('PVEServerCookie') || location.origin,
+	Setup: { auth_cookie_name: 'PVEAuthCookie' },
+	defaultLang: 'en',
+	UserName: 'root@pam',
+	CSRFPreventionToken: 'null'
+    };
+    </script>
+    <script type="text/javascript" src="./pwt/proxmoxlib.js?ver=3.6.3"></script>
+    <script type="text/javascript" src="./js/pvemanagerlib.js?ver=7.4-3"></script>
+    <script type="text/javascript" src="./ext6/locale/locale-en.js?ver=7.0.0"></script>
+
+    <script type="text/javascript">
+    if (typeof(PVE) === 'undefined') PVE = {};
+    Ext.History.fieldid = 'x-history-field';
+    Ext.onReady(function() { Ext.create('PVE.StdWorkspace');});
+    </script>
+
+  </head>
+  <body>
+    <!-- Fields required for history management -->
+    <form id="history-form" class="x-hidden">
+    <input type="hidden" id="x-history-field"/>
+    </form>
+  </body>
+</html>
