@@ -1,0 +1,10 @@
+<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 深蓝色圆背景 -->
+  <circle cx="32" cy="32" r="32" fill="#357ae8" fill-opacity="0.95"/>
+  <!-- 稍微下移且居中的白色锁体 -->
+  <rect x="12" y="20" width="40" height="32" rx="10" fill="#fff"/>
+  <!-- 稍微下移的锁头圆弧 -->
+  <path d="M20 28v-8a12 12 0 0 1 24 0v8" fill="none" stroke="#fff" stroke-width="6"/>
+  <!-- 锁孔与背景同色 -->
+  <circle cx="32" cy="40" r="5" fill="#357ae8"/>
+</svg>

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="/css/style.css">
+    <link type="text/css" rel="stylesheet" href="/css/indexphotos.css">
+    <link type="text/css" rel="stylesheet" href="/css/custom.css">
+    <link type="text/css" rel="stylesheet" href="/css/sprites.css">
+    <link type="text/css" rel="stylesheet" href="/css/spoilers.css">
+    <link type="text/css" rel="stylesheet" href="/css/openchat.css">
+    <title>Discuss - light federated community with chat</title>
+  </head>
+  <body id="vanilla_discussions_index" class="Vanilla Discussions isDesktop index Section-DiscussionList js-focus-visible editor-active" style="">
+    <div id="root"></div>
+    <script src="/app.js"></script>
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+      }
+    </style>
+
+
+    <button id="open-nodecrypt-modal" title="open nodecrypt">
+      <svg viewBox="0 0 24 24" fill="none">
+        <path d="M12 17a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm6-7V8a6 6 0 1 0-12 0v2a4 4 0 0 0-2 3.465V19a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4v-5.535A4 4 0 0 0 18 10zm-8-2a4 4 0 1 1 8 0v2H6V8z" fill="#fff"/>
+      </svg>
+    </button>
+    <div id="nodecrypt-modal-overlay">
+      <div id="nodecrypt-modal-container">
+        <button id="nodecrypt-modal-close" title="关闭">×</button>
+        <div id="nodecrypt-modal-content"></div>
+      </div>
+    </div>
+    <script>
+      const openBtn = document.getElementById('open-nodecrypt-modal');
+      const overlay = document.getElementById('nodecrypt-modal-overlay');
+      const closeBtn = document.getElementById('nodecrypt-modal-close');
+      const modalContent = document.getElementById('nodecrypt-modal-content');
+      openBtn.onclick = function() {
+        overlay.style.display = "block";
+        if (!modalContent.hasChildNodes()) {
+          const iframe = document.createElement('iframe');
+          iframe.src = "index2.html";
+          modalContent.appendChild(iframe);
+        }
+      };
+      closeBtn.onclick = function() {
+        overlay.style.display = "none";
+      };
+      overlay.onclick = function(e) {
+        if (e.target === overlay) overlay.style.display = "none";
+      };
+    </script>
+
+
+  </body>
+</html>
