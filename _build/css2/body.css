@@ -1,0 +1,586 @@
+body {
+	background: #fff;
+	font-family: 'Roboto', Arial, sans-serif;
+	margin: 0;
+}
+
+/* 翻转卡片样式 / Flip Card Styles */
+.flip-card {
+	perspective: 1000px;
+	max-width: 400px;
+	width: 100%;
+	height: 500px;
+	position: relative;
+}
+
+.flip-card-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 0.3s ease;
+	transform-style: preserve-3d;
+}
+
+.flip-card-inner.flipped {
+	transform: rotateX(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 14px;
+	padding: 39px 15px 20px 15px;
+	box-shadow: 0 2px 16px rgba(60, 80, 100, 0.09);
+	background: #fff;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	backface-visibility: hidden;
+}
+
+.flip-card-back {
+	transform: rotateX(180deg);
+}
+
+/* 帮助按钮样式 / Help Button Styles */
+.help-btn {
+	position: absolute;
+	top: 16px;
+	right: 16px;
+	background: none;
+	border: 0px;
+	color: #666;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.3s ease;
+	z-index: 10;
+}
+
+/* 控制翻转时按钮的可见性 */
+.flip-card-inner.flipped .flip-card-front .help-btn {
+	visibility: hidden;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.flip-card-inner:not(.flipped) .flip-card-back .help-btn {
+	visibility: hidden;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.help-btn:hover {
+	background: #30a8f7;
+	border-color: #30a8f7;
+	color: #fff;
+	transform: scale(1.1);
+}
+
+.help-btn:active {
+	transform: scale(0.95);
+}
+
+/* 帮助内容样式 / Help Content Styles */
+.help-content {
+	text-align: left;
+	max-height: 400px;
+	overflow-y: auto;
+	padding: 0 20px 20px 20px;
+	color: #333;
+	line-height: 1.6;
+}
+
+.help-section {
+	margin-bottom: 24px;
+}
+
+.help-section h3 {
+	font-size: 1.1rem;
+	color: #4A5568;
+	margin-bottom: 12px;
+	font-weight: 600;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.help-section p {
+	font-size: 0.95rem;
+	color: #666;
+	margin-bottom: 12px;
+	line-height: 1.5;
+}
+
+.help-section ol,
+.help-section ul {
+	font-size: 0.9rem;
+	color: #666;
+	margin-left: 16px;
+	margin-bottom: 12px;
+}
+
+.help-section li {
+	margin-bottom: 8px;
+	line-height: 1.4;
+}
+
+.help-section li strong {
+	color: #2D3748;
+	font-weight: 600;
+}
+
+/* 滚动条样式 */
+.help-content::-webkit-scrollbar {
+	width: 6px;
+}
+
+.help-content::-webkit-scrollbar-track {
+	background: #f1f1f1;
+	border-radius: 3px;
+}
+
+.help-content::-webkit-scrollbar-thumb {
+	background: #c1c1c1;
+	border-radius: 3px;
+}
+
+.help-content::-webkit-scrollbar-thumb:hover {
+	background: #a8a8a8;
+}
+
+.login-container {
+	/* 移除原有的样式，现在由flip-card处理 */
+	/* max-width: 400px;
+	margin: 60px auto 0 auto;
+	padding: 32px 24px 24px 24px;
+	background: #fff;
+	border-radius: 14px;
+	box-shadow: 0 2px 16px rgba(60, 80, 100, 0.09); */
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+
+    /* 使在最上，且modal in modal也居中 */
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255,255,255,0.97);
+    display: none;
+    justify-content: center;
+
+}
+
+.login-container h1 {
+	font-size: 2.2rem;
+	font-weight: 700;
+}
+
+.subtips {
+	color: #7a7a7a;
+	margin-bottom: 26px;
+	font-size: 1rem;
+}
+
+.login-container form {
+	display: flex;
+	flex-direction: column;
+	gap: 18px;
+}
+
+.input-group {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	position: relative;
+	margin-bottom: 10px;
+}
+
+.input-group label:not(.floating-label) {
+	font-size: 0.98rem;
+	color: #888;
+	margin-bottom: 6px;
+	margin-left: 2px;
+}
+
+.input-group .optional {
+	color: #b5b5b5;
+	font-size: 0.92em;
+	margin-left: 4px;
+}
+
+.input-group input {
+	width: 92%;
+	border: 1px solid #e5e5e5;
+	border-radius: 10px;
+	padding: 14px 14px;
+	font-size: 1.1rem;
+	outline: none;
+	background: #fafbfc;
+	transition: border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-group input:focus {
+	border-color: #30a8f7;
+	background: #fff;
+	box-shadow: 0 0 0 3px rgba(48, 168, 247, 0.1);
+}
+
+.login-btn {
+	margin-top: 20px;
+	background: #30a8f7;
+	border: none;
+	color: #fff;
+	font-size: 1.2rem;
+	font-weight: 500;
+	border-radius: 12px;
+	padding: 14px 0;
+	cursor: pointer;
+	letter-spacing: 1px;
+	transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.login-btn:hover,
+.login-btn:focus {
+	background: #2196e3;
+	box-shadow: 0 4px 12px rgba(48, 168, 247, 0.3);
+}
+
+.login-btn:active {
+	transform: translateY(1px);
+}
+
+.login-modal {
+	position: fixed;
+	z-index: 9999;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.login-modal-bg {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(255, 255, 255, 0.5);
+	backdrop-filter: blur(12px);
+	z-index: 1;
+}
+
+.login-modal-card {
+	position: relative;
+	z-index: 2;
+	background: #fff;
+	border-radius: 14px;
+	box-shadow: 0 2px 16px rgba(60, 80, 100, 0.13);
+	padding: 32px 24px 24px 24px;
+	min-width: 200px;
+	width: 400px;
+	text-align: center;
+}
+
+.login-modal-card form {
+	display: flex;
+	flex-direction: column;
+	gap: 18px;
+}
+
+.login-modal-close {
+	position: absolute;
+	right: 12px;
+	top: 10px;
+	background: none;
+	border: none;
+	font-size: 1.7rem;
+	color: #888;
+	cursor: pointer;
+	z-index: 3;
+	line-height: 1;
+	transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.login-modal-close:hover {
+	color: #30a8f7;
+	transform: scale(1.1);
+}
+
+.avatar {
+	width: 42px !important;
+	height: 42px !important;
+	border-radius: 50% !important;
+	display: flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	font-weight: bold !important;
+	font-size: 20px !important;
+	user-select: none !important;
+	overflow: hidden !important;
+	flex-shrink: 0 !important;
+	object-fit: cover !important;
+	margin-right: 8px !important;
+	box-sizing: border-box !important;
+	z-index: 2 !important;
+	position: relative !important;
+}
+
+.avatar img {
+	width: 100% !important;
+	height: 100% !important;
+	border-radius: 50% !important;
+	object-fit: cover !important;
+	display: block !important;
+	z-index: 2 !important;
+	position: relative !important;
+}
+
+.img-modal-bg {
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 9999;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(20, 20, 20, 0.92);
+}
+
+.img-modal-blur {
+	display: none;
+}
+
+.img-modal-content {
+	position: relative;
+	z-index: 2;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: none;
+	border-radius: 0;
+	box-shadow: none;
+	padding: 0;
+	width: 100vw;
+	height: 100vh;
+	max-width: 100vw;
+	max-height: 100vh;
+}
+
+.img-modal-content img {
+	max-width: 100vw;
+	max-height: 100vh;
+	border-radius: 0;
+	box-shadow: none;
+	background: none;
+	margin: 0 auto;
+	display: block;
+	cursor: zoom-in;
+	border: none;
+}
+
+.img-modal-close {
+	position: fixed;
+	right: 15px;
+	top: 15px;
+	font-size: 2.6rem;
+	color: #bbb;
+	background: none;
+	border-radius: 50%;
+	width: 48px;
+	height: 48px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	z-index: 10000;
+	line-height: 1;
+	box-shadow: none;
+	transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.img-modal-close:hover {
+	background: rgba(80, 80, 80, 0.25);
+	color: #fff;
+	transform: scale(1.1);
+}
+
+.bubble.system {
+	max-width: 70%;
+	padding: 5px 14px;
+	border-radius: 20px;
+	margin: 0px auto 5px;
+	font-size: 13px;
+	line-height: 1.4;
+	position: relative;
+	word-break: break-word;
+	background: #f0f4f8b3;
+	color: #555;
+	display: inline-block;
+	text-align: center;
+}
+
+.icon-22-middle {
+	width: 22px;
+	height: 22px;
+	vertical-align: middle;
+	margin-right: 25px;
+	margin-left: 25px;
+}
+
+.icon-22 {
+	width: 22px;
+	height: 22px;
+}
+
+.input-hidden {
+	display: none;
+}
+
+.chat-attach-btn-abs {
+	background: none;
+	border: none;
+	cursor: pointer;
+	padding: 4px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	right: -20px;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: transform 0.2s ease, color 0.2s ease;
+	z-index: 5;
+}
+
+.chat-attach-btn-abs:hover {
+	transform: translateY(-50%) scale(1.1);
+	color: #30a8f7;
+}
+
+.input-message-input-init {
+	height: 37px;
+}
+
+.bubble-img {
+	max-width: 220px;
+	max-height: 180px;
+	border-radius: 8px;
+}
+
+.login-modal-close-abs {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	font-size: 22px;
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+
+.main-header-flex {
+	display: flex;
+	align-items: center;
+}
+
+.group-title-bold {
+	font-size: 1.22em;
+	font-weight: bold;
+}
+
+.main-header-members {
+	margin-left: 10px;
+	font-size: 13px;
+	color: #888;
+}
+
+.img-modal-content-overflow {
+	overflow: hidden;
+}
+
+.img-modal-img {
+	max-width: 90vw;
+	max-height: 90vh;
+	cursor: grab;
+	user-select: none;
+}
+
+
+.send-message-btn {
+  background: rgb(3, 169, 244);
+  background: linear-gradient(
+    138deg,
+    rgba(3, 169, 244, 1) 15%,
+    rgba(63, 180, 233, 1) 65%
+  );
+  position: relative;
+  cursor: pointer;
+  font-size: 17px;
+  padding: 0.7em 0.7em;
+  border-radius: 50px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  margin: 0px 0px 3px 7px;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+.send-message-btn:hover {
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+.send-message-btn:active {
+  transform: scale(0.95) translateY(0px);
+  box-shadow: 0 0.3rem 0.8rem rgba(3, 169, 244, 0.2);
+  transition: all 0.1s ease;
+}
+.send-message-btn .text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: #fff;
+  transition: all 0.3s ease;
+}
+.send-message-btn:hover .text {
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+.send-message-btn:active .text {
+  transform: scale(0.95);
+  transition: all 0.1s ease;
+}
+
+/* 确保发送按钮的点击区域不被其他元素遮挡 */
+.send-message-btn {
+  position: relative;
+  z-index: 10;
+}
+
+/* 确保发送按钮在所有父容器中都有足够的层级 */
+.chat-input-wrapper .send-message-btn {
+  position: relative;
+  z-index: 15;
+}
+
+/* 防止任何绝对定位的元素遮挡发送按钮 */
+.new-message-wrapper {
+  position: relative;
+  z-index: 1;
+}

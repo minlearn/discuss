@@ -1,0 +1,27 @@
+/* 浮动标签动画样式 */
+.input-group {
+  position: relative;
+}
+
+.input-group .floating-label {
+  position: absolute;
+  top: 14px;
+  left: 16px;
+  pointer-events: none;
+  font-size: 1.1rem;
+  color: #888;
+  transition: 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.input-group input:focus + .floating-label,
+.input-group input:not(:placeholder-shown) + .floating-label {
+  color: #30a8f7;
+  transform: translateY(-40px);
+}
+
+.input-group .floating-label span {
+  display: inline;
+  color: inherit;
+  transition: none;
+  min-width: 0;
+}
