@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="/css/style.css">
+    <link type="text/css" rel="stylesheet" href="/css/indexphotos.css">
+    <link type="text/css" rel="stylesheet" href="/css/custom.css">
+    <link type="text/css" rel="stylesheet" href="/css/sprites.css">
+    <link type="text/css" rel="stylesheet" href="/css/spoilers.css">
+    <link type="text/css" rel="stylesheet" href="/css/openchat.css">
+    <title>Discuss - light federated community with chat</title>
+  </head>
+  <body id="vanilla_discussions_index" class="Vanilla Discussions isDesktop index Section-DiscussionList js-focus-visible editor-active" style="">
+    <div id="root"></div>
+    <script src="/app.js"></script>
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+      }
+.circular-menu {
+  position: fixed;
+  bottom: 4.5em;
+  left: 3.5em;
+  z-index: 100;
+}
+.circular-menu .floating-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.8em;
+  height: 1.8em;
+  border-radius: 50%;
+  background-color: hsl(148, 65%, 48%);
+  box-shadow: 0 6px 24px 0 hsla(148, 65%, 30%, .18), 0 1.5px 4px #388e5c12;
+  color: #fff;
+  cursor: pointer;
+  outline: 0;
+  font-size: 1.2em;
+  transition: box-shadow .2s, background .2s, transform .18s;
+}
+.circular-menu.active .floating-btn {
+  box-shadow: 0 2px 12px 0 hsla(148, 65%, 20%, .19), 0 0 0 4px #bafc0330;
+}
+.circular-menu .floating-btn:active {
+  box-shadow: 0 8px 18px 0 hsla(0, 0%, 0%, .16);
+  background-color: hsl(148, 65%, 38%);
+  transform: scale(0.96);
+}
+.circular-menu .floating-btn i,
+.circular-menu .floating-btn svg {
+  font-size: 1.2em;
+  width: 1em;
+  height: 1em;
+  display: block;
+  transition: transform .2s;
+}
+.circular-menu.active .floating-btn i,
+.circular-menu.active .floating-btn svg {
+  transform: rotate(90deg);
+}
+.circular-menu:after {
+  display: block;
+  content: ' ';
+  width: 1.8em;
+  height: 1.8em;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  background-color: hsl(148, 65%, 48%);
+  opacity: 0.18;
+  transition: all .3s ease;
+  pointer-events: none;
+}
+.circular-menu.active:after {
+  transform: scale3d(4, 4, 1);
+  opacity: 0.25;
+  transition-timing-function: cubic-bezier(.68, 1.55, .265, 1);
+}
+.circular-menu .items-wrapper {
+  padding: 0;
+  margin: 0;
+}
+.circular-menu .menu-item {
+  position: absolute;
+  top: 0.5em;
+  left: 0.5em;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.45em;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  background-color: hsl(148, 65%, 38%);
+  border: 1px solid #aea;
+  box-shadow: 0 4px 16px hsla(148, 65%, 20%, 0.19), 0 1.5px 8px #388e5c12;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.13));
+  font-weight: bold;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.24);
+  transition: transform .3s cubic-bezier(0.175, 0.885, 0.32, 1.275), background .2s, color .2s, box-shadow .2s;
+  backdrop-filter: blur(2px);
+}
+.circular-menu .menu-item:hover {
+  background-color: hsl(148, 65%, 28%);
+  color: #bafc03;
+  border-color: #bafc03;
+  box-shadow: 0 8px 24px hsla(148, 65%, 20%, 0.28);
+  transform: scale(1.08) translateY(-2px);
+}
+.circular-menu .menu-item i,
+.circular-menu .menu-item svg {
+  font-size: 1em;
+  width: 1em;
+  height: 1em;
+  display: block;
+  pointer-events: none;
+}
+.circular-menu.active .menu-item:nth-child(1) { transform: translate3d(-1.3em,-3em,0); }
+.circular-menu.active .menu-item:nth-child(2) { transform: translate3d(1em,-2.6em,0); }
+.circular-menu.active .menu-item:nth-child(3) { transform: translate3d(1.3em,-0.3em,0); }
+@media (max-width: 480px) {
+  .circular-menu { bottom: 1em; left: 1em; }
+  .circular-menu .floating-btn, .circular-menu:after { width: 2.1em; height: 2.1em; }
+  .circular-menu .menu-item { width: 1.5em; height: 1.5em; top: 0.2em; left: 0.2em; font-size: 1em; }
+  .circular-menu.active .menu-item:nth-child(1) { transform: translate3d(0.07em,-1.2em,0); }
+  .circular-menu.active .menu-item:nth-child(2) { transform: translate3d(0.85em,-0.85em,0); }
+  .circular-menu.active .menu-item:nth-child(3) { transform: translate3d(1.25em,0.25em,0); }
+}
+    </style>
+
+
+    <!-- circular-menu 结构插入在body末尾，不影响上面结构 -->
+    <div id="circularMenu" class="circular-menu circular-menu-left active">
+      <a class="floating-btn" onclick="document.getElementById('circularMenu').classList.toggle('active');" title="主菜单">
+        <!-- fa-bars -->
+        <svg viewBox="0 0 448 512" width="1em" height="1em" fill="currentColor" aria-hidden="true">
+          <path d="M16 132h416c8.8 0 16-7.2 16-16V92c0-8.8-7.2-16-16-16H16c-8.8 0-16 7.2-16 16v24c0 8.8 7.2 16 16 16zm0 96h416c8.8 0 16-7.2 16-16v-24c0-8.8-7.2-16-16-16H16c-8.8 0-16 7.2-16 16v24c0 8.8 7.2 16 16 16zm0 96h416c8.8 0 16-7.2 16-16v-24c0-8.8-7.2-16-16-16H16c-8.8 0-16 7.2-16 16v24c0 8.8 7.2 16 16 16z"/>
+        </svg>
+      </a>
+      <menu class="items-wrapper">
+        <a href="#" class="menu-item" id="menu-download-btn" title="文件下载">
+          <!-- fa-download -->
+<svg viewBox="0 0 512 512" width="1.2em" height="1.2em" fill="currentColor" aria-hidden="true">
+  <path d="M480 352c17.7 0 32 14.3 32 32v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64v-64c0-17.7 14.3-32 32-32s32 14.3 32 32v64h384v-64c0-17.7 14.3-32 32-32zm-136-72v-112c0-13.3-10.7-24-24-24h-56c-13.3 0-24 10.7-24 24v112h-67c-17.8 0-26.7 21.5-14.1 34.1l123 123c7.5 7.5 19.8 7.5 27.3 0l123-123c12.6-12.6 3.7-34.1-14.1-34.1h-67z"/>
+</svg>
+        </a>
+        <a href="#" class="menu-item" id="menu-commenting-btn" title="聊天">
+          <!-- fa-commenting -->
+          <svg viewBox="0 0 512 512" width="1em" height="1em" fill="currentColor" aria-hidden="true">
+            <path d="M256 32C114.6 32 0 125.1 0 240c0 49.2 24.2 94.3 64.6 129.2C57 401.6 30.5 447.5 30.2 448.1c-4.7 8.1-4.7 18.2 0 26.3s13.4 13.4 22.7 13.4c61.7 0 110.3-19.8 139.3-36.2C217.4 453.3 236.4 456 256 456c141.4 0 256-93.1 256-208S397.4 32 256 32zm-96 184c13.3 0 24 10.7 24 24s-10.7 24-24 24-24-10.7-24-24 10.7-24 24-24zm96 0c13.3 0 24 10.7 24 24s-10.7 24-24 24-24-10.7-24-24 10.7-24 24-24zm96 0c13.3 0 24 10.7 24 24s-10.7 24-24 24-24-10.7-24-24 10.7-24 24-24z"/>
+          </svg>
+        </a>
+        <a href="#" class="menu-item" title="联合">
+          <!-- fa-users -->
+<svg viewBox="0 0 640 512" width="1.2em" height="1.2em" fill="currentColor" aria-hidden="true">
+  <path d="M96 128a64 64 0 1 1 128 0 64 64 0 1 1-128 0zm224 64a64 64 0 1 0 0-128 64 64 0 1 0 0 128zm224 32a64 64 0 1 0 0-128 64 64 0 1 0 0 128zM320 304c-57.3 0-172 28.7-172 86v42c0 7.7 6.3 14 14 14h316c7.7 0 14-6.3 14-14v-42c0-57.3-114.7-86-172-86zm224 16c-19.1 0-46.9 2.2-76.6 8.2 15.6 16.2 28.6 36.6 28.6 61.8v42c0 2.7-.6 5.2-1.5 7.5H594c7.7 0 14-6.3 14-14v-42c0-35.3-54.2-63.3-64-63.5zM96 320c-9.8.2-64 28.2-64 63.5v42c0 7.7 6.3 14 14 14h99.5c-.9-2.3-1.5-4.8-1.5-7.5v-42c0-25.2 13-45.6 28.6-61.8C142.9 322.2 115.1 320 96 320z"/>
+</svg>
+        </a>
+      </menu>
+    </div>
+    <div id="nodecrypt-modal-overlay">
+      <div id="nodecrypt-modal-container">
+        <button id="nodecrypt-modal-close" title="关闭">×</button>
+        <!-- 多页面共存，预置两个iframe -->
+        <div id="nodecrypt-modal-content"><iframe id="iframe-index2" src="index2.html" style="display:none;"></iframe><iframe id="iframe-index3" src="index3.html" style="display:none;"></iframe></div>
+      </div>
+    </div>
+    <script>
+      const openBtn = document.getElementById('menu-commenting-btn');
+      const openBtn2 = document.getElementById('menu-download-btn');
+      const iframe2 = document.getElementById('iframe-index2');
+      const iframe3 = document.getElementById('iframe-index3');
+      // 页面显示函数
+      function showModal(which) {
+        overlay.style.display = "flex";
+        // 切换iframe显示状态
+        if (which === 'index2') {
+          iframe2.style.display = "block";
+          iframe2.classList.add("active");
+          iframe3.style.display = "none";
+          iframe3.classList.remove("active");
+        } else if (which === 'index3') {
+          iframe3.style.display = "block";
+          iframe3.classList.add("active");
+          iframe2.style.display = "none";
+          iframe2.classList.remove("active");
+        }
+      }
+      function closeModal() {
+        overlay.style.display = "none";
+        iframe2.style.display = "none";
+        iframe2.classList.remove("active");
+        iframe3.style.display = "none";
+        iframe3.classList.remove("active");
+      }
+
+      const overlay = document.getElementById('nodecrypt-modal-overlay');
+      const closeBtn = document.getElementById('nodecrypt-modal-close');
+      openBtn.onclick = function() { showModal('index2'); };
+      openBtn2.onclick = function() { showModal('index3'); };
+      closeBtn.onclick = function() {
+        closeModal();
+      };
+      overlay.onclick = function(e) {
+        if (e.target === overlay) closeModal();
+      };
+    </script>
+
+
+  </body>
+</html>
