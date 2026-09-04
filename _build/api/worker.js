@@ -4475,14 +4475,20 @@ class qn {
     const n = e.credentialCiphertext;
     if (!n)
       throw new f("CHANNEL_CREDENTIAL_MISSING", "Telegram bot token is missing", 400);
-    const a = await fetch(`https://api.telegram.org/bot${n}/sendMessage`, {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify({
-        chat_id: t.externalThreadId,
-        text: t.content ?? ""
-      })
-    }), r = wr.parse(await a.json().catch(() => ({ ok: !1 })));
+    let a;
+    try {
+      a = await fetch(`https://api.telegram.org/bot${n}/sendMessage`, {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({
+          chat_id: t.externalThreadId,
+          text: t.content ?? ""
+        })
+      });
+    } catch {
+      throw new f("MESSAGE_SEND_FAILED", "Telegram sendMessage request failed", 502);
+    }
+    const r = wr.parse(await a.json().catch(() => ({ ok: !1 })));
     if (!a.ok || !r.ok || !r.result)
       throw new f(
         "MESSAGE_SEND_FAILED",
