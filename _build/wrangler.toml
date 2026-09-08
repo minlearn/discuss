@@ -1,0 +1,68 @@
+name = "supportly"
+main = "./api/worker.js"
+compatibility_date = "2026-03-27"
+
+# default behaiver for wrangler 4.x
+#[build]
+#upload.format = "service-worker"
+
+[assets]
+# 静态请求在 compatibility_date >= 2025-04-01 时不计费
+directory = "./frontend"
+# SPA fallback：前端路由刷新时返回 index.html（避免 404）
+not_found_handling = "single-page-application"
+# 配置：明确指定这些路径优先进入 Worker 处理
+run_worker_first = ["/api/*", "/health", "/webhooks", "/webhooks/*"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "supportly"
+database_id = "11111111-1111-1111-1111-111111111111"
+
+[[r2_buckets]]
+binding = "MEDIA_BUCKET"
+bucket_name = "supportly"
+remote = true
+
+[[durable_objects.bindings]]
+name = "VISITOR_STREAM"
+class_name = "VisitorStream"
+
+[[durable_objects.bindings]]
+name = "ADMIN_STREAM"
+class_name = "AdminStream"
+
+[[durable_objects.bindings]]
+name = "END_USER_STREAM"
+class_name = "EndUserStream"
+
+[[migrations]]
+tag = "v1_realtime_streams"
+new_sqlite_classes = ["VisitorStream", "AdminStream"]
+
+[[migrations]]
+tag = "v2_end_user_stream"
+new_sqlite_classes = ["EndUserStream"]
+
+[[ai_search_namespaces]]
+binding = "AI_SEARCH"
+namespace = "aidesk"
+remote = true
+
+[ai]
+binding = "AI"
+remote = true
+
+[vars]
+KB_INSTANCE_NAME = "supportly-dev"
+DEFAULT_AI_MODEL = "@cf/meta/llama-3.1-8b-instruct"
+JWT_SECRET = "supportly-dev-secret-change-before-deploy"
+END_USER_JWT_SECRET = "supportly-dev-enduser-secret-change-before-deploy"
+WIDGET_TOKEN_SECRET = "supportly-widget-dev-secret-change-before-deploy"
+FORUM_CHANNEL_ID = "11111111-1111-1111-1111-111111111111"
+FORUM_TITLE = "社区论坛"
+FORUM_PRIMARY_COLOR = "#2563eb"
+FORUM_CATEGORIES = "综合讨论,技术交流,问题反馈,资源分享,公告通知"
+WIDGET_CHANNEL_ID = "11111111-1111-1111-1111-111111111111"
+WIDGET_TITLE = "社区支持"
+WIDGET_MODE = "pm"
